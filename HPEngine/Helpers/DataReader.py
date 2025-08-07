@@ -54,3 +54,12 @@ def read(file_path, **kwargs):
         except Exception as e:
             logging.error(f"Failed to read file as excel: {e}")
             return None
+        
+if __name__ == "__main__":
+    # Example usage
+    file_path = "example.csv"  # Replace with your file path
+    df = read(file_path)
+    if df is not None:
+        print(df.head())
+    else:
+        print("Failed to read the file.")
